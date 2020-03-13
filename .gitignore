@@ -21,3 +21,5 @@ ex_files
 Thumbs.db
 __MACOSX/
 log.md
+src
+.babelrc
