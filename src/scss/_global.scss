@@ -11,6 +11,10 @@ ul, ol, li, h1, h2, h3, h4, h5, h6, img, a, p, span {
   padding: 0;
   list-style: none;
 }
+h1,h3, h4, h5, h6{
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
 a{
   text-decoration: none;
   display: inline-block;
@@ -42,8 +46,42 @@ body{
 	flex: 0 0 auto;
 }
 .container{
-  max-width: 2040px;
-  padding: 0 80px 0 40px;
+  max-width: 1765px;
+  padding: 0 60px 0 92px;
   margin: 0 auto;
 }
-
+.btn-big{
+  transition: all .2s;
+  box-shadow: 0px 5px 12px rgba(49, 40, 70, 0.12);
+  position: relative;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.08em;
+  color: #303030;
+  padding: 36px 83px 35px 64px ;
+  span{
+      box-shadow: 0px 5px 12px rgba(49, 40, 70, 0.12);
+      height: 100%;
+      width: 107px;
+      background-color: $yellow;
+      position: absolute;
+      right:  1px;
+      transform: translateX(100%);
+      top: 0;
+  }
+  &:hover{
+    color: $yellow;
+  }
+}
+.bg-arrow {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  transform: translate(-50%,-50%);
+  width: 55px; height: 18px;
+  background: url('../img/svg/sprites-blade.png') -127px -10px;
+  z-index: 5;
+}

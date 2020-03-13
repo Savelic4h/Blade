@@ -7,12 +7,19 @@
 // HEADER 
 // ----------------------
 .header{
-  background-color: #654EA3;
+  background-color: transparent;
+  position: fixed;
+  right: 0;
+  left: 0;
+  
 }
 .header__inner{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 2040px;
+  padding: 0 80px 0 40px;
+  margin: 0 auto;
 }
 .header-menu{
   display: flex;
@@ -37,7 +44,7 @@
       content: '';
       position: absolute;
       left: -10%;
-      background-color: #F2C03F;
+      background-color: $yellow;
       opacity: 0.75;
       width: 120%;
       height: 70%;
@@ -79,7 +86,7 @@
       line-height: 16px;
       letter-spacing: -0.02em;
       &:active{
-        color: #F2C03F;
+        color: $yellow;
       }
     }
     li{
@@ -160,7 +167,113 @@
     } 
   }
 }
-
+.mainPage{
+    height: 100vh;
+    padding-top: 145px;
+    background: $purple;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.mainPage-words__bg{
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: -5;
+}
+.mainPage__inner{ 
+  padding-top: 160px;
+  max-width: 920px;
+}
+.hashtag{
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.02em;
+  color: $yellow;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.mainPage-title{
+  font-size: 72px;
+  line-height: 110%;
+  letter-spacing: 0.04em;
+  color: #FFF5F5;
+  font-weight: 900;
+  padding-bottom: 80px;
+}
+.conditions-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  color: #FFFFFF;
+  opacity: 0.74;
+  line-height: 22px;
+  margin-bottom: 120px;
+  .condition-date{
+    max-width: 190px;
+    padding-left: 56px;
+    padding-right: 32px;
+  }
+  .condition-palce{
+    max-width: 317px;
+    padding: 0 48px 0 95px;
+  }
+  .condition-winner{
+    max-width: 336px;
+    padding-left: 94px;
+  }
+  div{
+    & + div{
+      border-left: 1px solid rgba(#fff,.4);
+    }
+    position: relative;
+  }
+  .bg-calendar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 37px; height: 34px;
+    background: url('../img/svg/sprites-blade.png') -70px -10px;
+  }
+  .bg-map {
+    position: absolute;
+    left: 48px;
+    top: 0;
+    width: 28px; height: 35px;
+    background: url('../img/svg/sprites-blade.png') -10px -121px;
+  }
+  .bg-winner {
+    position: absolute;
+    left: 46px;
+    top: 0; 
+    width: 40px; height: 37px;
+    background: url('../img/svg/sprites-blade.png') -10px -10px;
+  }
+}
+.mainPage-btn{
+  margin-bottom: 142px;
+}
+.mainPage-social{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 180px;
+  li{
+    cursor: pointer;
+    opacity: 0.32;
+    &:hover{
+      svg{
+        path{
+        fill:#F2C03F;
+        }
+      }
+      opacity: 1;
+    }
+  }
+}
 
 
 @import "media";
